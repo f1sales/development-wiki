@@ -17,3 +17,32 @@ This a guide for development best practices.
  1. Tested by code and human
  2. Approved by a Pull Request 
  3. Accomplishes the ticket definition
+ 
+ ---
+
+## Resources
+
+**Index**
+
++ [git](#git)
+---
+
+### **git**
+
+#### **Run `rubocop` on pre commit:**
+Rename `.git/hooks/pre-commit.sample` to `.git/hooks/pre-commit` with the following contents:
+
+
+```
+#!/usr/bin/env bash
+echo "Running pre-commit hook"
+bundle exec rubocop
+# $? stores exit value of the last command
+# 0 = Success
+if [ $? -ne 0 ]; then
+ echo "Oops, clean your code before committing!"
+ exit 1
+fi
+```
+
+`git` will now run this script everytime the user attempts to commit checking whether or not `rubocop` succeeds.

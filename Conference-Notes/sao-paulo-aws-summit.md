@@ -11,8 +11,10 @@
 - [Well Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
 - Use MongoDB TTL for documents that are not useful anymore
 - MongoDB `$facet` operator do not use indexes after the first match
-- 'every ms counts', make sure to use lean and clean functions/code
-- 
+- 'every ms counts', make sure to use lean and clean functions/code.
+- [Porpuse-built DB stragegy](#IMG_1352). We don't need to *exclusevely* work with just one kind of DB. 
+- Use caching alongside asynchronous functions (jobs, in our case).
+- Things will fails eventually, so make sure to have a fallback strategy in hand.
 
 ---
 

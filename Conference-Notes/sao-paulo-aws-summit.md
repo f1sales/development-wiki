@@ -1,4 +1,4 @@
-# 04-08-2022 São Paulo AWS Summit (by @marciok)
+# 04-08-2022 São Paulo AWS Summit (by @marciok & @trinaldi)
 
 - EC2 global view to see where your resources are allocated and consuming computing.
 - Step functions to automate internal processes, combine manual and automated tasks ex: User validation, onboardings etc..
